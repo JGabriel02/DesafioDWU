@@ -1,0 +1,19 @@
+<div class="dark-background">
+<div class="login-container">
+    <h2 class="login-title">Bem vindo</h2>
+    <div *ngIf="loginError" class="error-message">
+      Dados de login inválidos. Por favor, tente novamente.
+    </div>
+    <div class="login-form">
+      <div class="form-group">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" [(ngModel)]="username" />
+      </div>
+      <div class="form-group">
+        <label for="password">Senha:</label>
+        <input type="password" id="password" [(ngModel)]="password" />
+      </div>
+      <button class="button-enter" (click)="login()">Entrar</button>
+    </div>
+  </div>
+</div> 
